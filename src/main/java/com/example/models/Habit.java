@@ -34,7 +34,7 @@ public class Habit {
             streak = 1;
         }
         lastCompleted = today;
-        
+        GameManager.getInstance().getUser().updateMaxStreak(streak);
         }
         public void resetStreak(){
             streak = 0;

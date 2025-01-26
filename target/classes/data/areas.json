@@ -4,9 +4,15 @@
         "unlockRequirements":"",
         "locked":false,
         "store":"GardenStore",
-        "decorations":[ "Tulip", "Fountain", "Bench" ]
-    }
+        "decorations":[ "Tulip", "Fountain", "Bench" ],
+        "scene":"image"
+    },
     {
-        "name": ""
+        "name": "Farmyard",
+        "unlockRequirements": "",
+        "locked": true,
+        "store": "FarmStore",
+        "decorations":["Tractor","Haystack","Doghouse"],
+        "scene":"image"
     }
 ]

@@ -62,8 +62,11 @@ public class User {
     public int getMaxStreak(){
         return maxStreak;
     }
-    public void setMaxStreak(int streak){
-        maxStreak = streak;
-    }   
+    public void updateMaxStreak(int streak){
+        if(streak > maxStreak){
+            maxStreak = streak;
+        }
+    }
+       
 
 }
