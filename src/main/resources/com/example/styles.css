@@ -1,0 +1,10 @@
+.button{
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.button:hover{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
