@@ -7,7 +7,7 @@ import javafx.fxml.FXML;
 public class StoreController {
 
     @FXML
-    private void goHome() throws IOException {
+    private void switchToHome() throws IOException {
         App.setRoot("home");
     }
 }
