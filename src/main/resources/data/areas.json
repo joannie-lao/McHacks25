@@ -1,0 +1,12 @@
+[
+    {
+        "name":"Front Garden",
+        "unlockRequirements":"",
+        "locked":false,
+        "store":"GardenStore",
+        "decorations":[ "Tulip", "Fountain", "Bench" ]
+    }
+    {
+        "name": ""
+    }
+]

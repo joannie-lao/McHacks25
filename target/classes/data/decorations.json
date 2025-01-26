@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Tulip",
+        "type": "Growable",
+        "cost": 5,
+        "growthStages": [
+            {
+                "stage": 1,
+                "image": ""
+            },
+            {
+                "stage": 2,
+                "image": ""
+            },
+            {
+                "stage": 3,
+                "image": ""
+            }
+        ]
+    },
+    {
+        "name": "Fountain",
+        "type": "Animated",
+        "cost": "50",
+        "frames":[
+            {
+                "stage": 1,
+                "image": ""
+            },
+            {
+                "stage": 2,
+                "image": ""
+            },
+            {
+                "stage": 3,
+                "image": ""
+            }
+        ] 
+    },
+    {
+        "name": "Bench",
+        "type": "Static",
+        "cost": 10,
+        "image": ""
+    }
+    
+]
