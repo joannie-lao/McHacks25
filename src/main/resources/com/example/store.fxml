@@ -6,21 +6,29 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.StoreController" stylesheets ="@styles.css">
-    <children>
-        <Label text="Store" />
-        <Button fx:id="homeButton" text="Home" onAction="#switchToHome">
+<GridPane fx:controller="com.example.StoreController" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" 
+stylesheets ="@styles.css" alignment="center" hgap="10" vgap="10">
+    <VBox alignment="CENTER" spacing="20.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
+        <children>
+            <Label text="Store" />
+        </children>
+        <padding>
+            <Insets top="370" right="10" bottom="10" left="475"/>
+        </padding>
+    </VBox>
+    <Button fx:id="homeButton" onAction="#switchToHome" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
         <graphic>
-            <ImageView fitWidth = "50" fitHeight = "50">
-               <image>
-                  <Image url="@cart.png" />
-               </image>
+            <ImageView fitWidth="50" fitHeight="50">
+                <image>
+                    <Image url="@homeButton.png" />
+                </image>
             </ImageView>
-         </graphic>
-        </Button>
-    </children>
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
-</VBox>
+        </graphic>
+    </Button>
+</GridPane>
