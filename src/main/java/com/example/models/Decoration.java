@@ -4,6 +4,7 @@ public class Decoration {
     private String name;
     private int cost;
     private int tier;
+    private Area area;
 
     public Decoration(String name, int cost, int tier) {
         this.name = name;
