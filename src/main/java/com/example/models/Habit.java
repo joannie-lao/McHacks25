@@ -44,9 +44,9 @@ public class Habit {
         }
         public int calculateCoins(int multiplier){
             double worthiness = 0;
-            //worthiness is calculated both by the length of the streak and the required frequency over time of the habit
+            //worthiness is calculated by the length of the streak (increase) and the frequency of the habit (higher frequency worth less)
             double normalizedFrequency = (double) frequency / TimeUnit.DAYS.convert(frequency,unit);
-
+            worthiness = streak * normalizedFrequency; //make sure this calculates in the right direction
             return (int) Math.round(worthiness * multiplier);
         }
     }
