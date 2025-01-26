@@ -34,6 +34,9 @@ public class GameManager {
         }
         return instance;
     }
+    public List<Area> getAreas(){
+        return areas;
+    }
 
     
     

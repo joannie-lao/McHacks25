@@ -2,6 +2,7 @@ package com.example.models;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -14,9 +15,15 @@ public class User {
     private HashMap<Integer,Triple<Integer,Integer,Integer>> difficultyMap = new HashMap<Integer,Triple<Integer,Integer,Integer>>();
     private int habitsAllowed;
     private int maxStreak;
+    private Inventory inventory;
 
     public User() {
         this.coins = 0;
+        this.habits = new ArrayList<Habit>();
+        this.unlockedDecorations = new HashSet<Decoration>();
+        this.unlockedAreas = new ArrayList<Area>();
+        this.maxStreak = 0;
+        this.difficultyMap = new HashMap<Integer,Triple<Integer,Integer,Integer>>();
         difficultyMap.put(1, new Triple<Integer,Integer,Integer>(1,2,3));
         difficultyMap.put(2, new Triple<Integer,Integer,Integer>(2,3,4));
         difficultyMap.put(3, new Triple<Integer,Integer,Integer>(3,4,5));
@@ -27,6 +34,7 @@ public class User {
         difficultyMap.put(8, new Triple<Integer,Integer,Integer>(8,9,10));
         habitsAllowed = 5;
         this.habits = new ArrayList<Habit>();
+        this.inventory = new Inventory();
     }
     public int getHabitsRemaining(){
         return habitsAllowed - habits.size();
