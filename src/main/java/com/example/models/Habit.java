@@ -13,6 +13,7 @@ public class Habit {
     private LocalDate lastCompleted;
     private Integer difficulty;
     private int dayFreq;
+    private int timesCompleted;
     private SizeLimitedQueue<LocalDate> total;
 
     public static class SizeLimitedQueue<LocalDate> extends LinkedList<LocalDate> {
@@ -38,6 +39,7 @@ public class Habit {
         this.streak = 0;
         this.lastCompleted = null;
         dayFreq = (int) TimeUnit.DAYS.convert(frequency,unit);
+        this.timesCompleted = 0;
         this.total = new SizeLimitedQueue<LocalDate>(frequency);
     }
 
@@ -59,7 +61,7 @@ public class Habit {
         }
         lastCompleted = today;
         total.add(today);
-
+        timesCompleted++;
     }
     public void resetStreak(){
         streak = 0;
