@@ -8,8 +8,9 @@ public abstract class Decoration {
     private int tier;
     private Area area;
     private GrowableBehavior growableBehavior;
+    private AnimatedBehavior animatedBehavior;
 
-    public Decoration(String name, int cost, int tier, Area area,boolean growable,List<String> stages) {
+    public Decoration(String name, int cost, int tier, Area area,boolean growable,List<String> stages,boolean animated,List<String> frames) {
         this.name = name;
         this.cost = cost;
         this.tier = tier;
@@ -18,6 +19,9 @@ public abstract class Decoration {
         area.addDecoration(this);
         if(growable){
             this.growableBehavior = new GrowableBehavior(stages);
+        }
+        if(animated){
+            this.animatedBehavior = new AnimatedBehavior(frames);
         }
     }
 
@@ -30,5 +34,18 @@ public abstract class Decoration {
     public int getTier() {
         return tier;
     }
+    public boolean isGrowable(){
+        return growableBehavior != null;
+    }
+    public boolean isAnimated(){
+        return animatedBehavior != null;
+    }
+    public GrowableBehavior getGrowableBehavior(){
+        return growableBehavior;
+    }
+    public AnimatedBehavior getAnimatedBehavior(){
+        return animatedBehavior;
+    }
+    
     
 }

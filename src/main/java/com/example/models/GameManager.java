@@ -2,9 +2,12 @@ package com.example.models;
 
 import java.util.List;
 
+import com.example.util.ContentLoader;
+
 public class GameManager {
     private User user;
     private List<Area> areas;
+    private List<Decoration> decorations;
     private static GameManager instance;
     public GameManager() {
         this.user = new User();
@@ -16,7 +19,8 @@ public class GameManager {
     }
     public void loadGame() {
         // Load the game
-        
+        this.areas = ContentLoader.loadAreas();
+        this.decorations = ContentLoader.loadDecorations();
 
     }
     public User getUser(){
@@ -28,6 +32,7 @@ public class GameManager {
         }
         return instance;
     }
+    
     
     
 }
