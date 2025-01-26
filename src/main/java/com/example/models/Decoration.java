@@ -6,10 +6,13 @@ public class Decoration {
     private int tier;
     private Area area;
 
-    public Decoration(String name, int cost, int tier) {
+    public Decoration(String name, int cost, int tier, Area area) {
         this.name = name;
         this.cost = cost;
         this.tier = tier;
+        this.area = area;
+        area.getStore().getTieredDecorations().get(tier).add(this);
+        area.addDecoration(this);
     }
 
     public String getName() {
