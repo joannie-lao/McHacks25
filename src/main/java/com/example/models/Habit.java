@@ -24,4 +24,3 @@ public class Habit {
         lastCompleted = today;
         }
     }
-}
