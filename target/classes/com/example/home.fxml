@@ -32,8 +32,6 @@ stylesheets ="@styles.css" alignment="center" hgap="10" vgap="10">
         </graphic>
     </Button>
     <VBox fx:id="habitsContainer" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM" spacing="10">
-        <!-- Checkboxes will be dynamically added here -->
-        
     </VBox>
 </GridPane>
 

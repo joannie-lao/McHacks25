@@ -25,25 +25,25 @@ public class HomeController {
     @FXML
     public void initialize(){
         populateHabits();
-    }
+        }
 
-    private void populateHabits(){
+        private void populateHabits(){
         for (Habit habit : habits){
             CheckBox checkbox = new CheckBox();
             checkbox.setGraphic(createHabitIcon(habit.getCompleted()));
-            checkbox.setText("");
+            checkbox.setText(habit.getName());
 
             // Add event listener to update the habit status when clicked
             checkbox.setOnAction(event -> {
-                boolean newStatus = checkbox.isSelected();
-                if(newStatus){
-                    habit.isCompleted();
-                } else {
-                    habit.incomplete();
-                }
+            boolean newStatus = checkbox.isSelected();
+            if(newStatus){
+                habit.isCompleted();
+            } else {
+                habit.incomplete();
+            }
 
-                // Update the icon based on the new status
-                checkbox.setGraphic(createHabitIcon(habit.getCompleted()));
+            // Update the icon based on the new status
+            checkbox.setGraphic(createHabitIcon(habit.getCompleted()));
             });
 
             // Set initial state based on the habit's checked status
@@ -55,10 +55,10 @@ public class HomeController {
 
         }
         private ImageView createHabitIcon(boolean checked){
-            ImageView icon = new ImageView();
-            icon.setFitWidth(20);
-            icon.setFitHeight(20);
-            icon.setImage(new Image(getClass().getResource(checked ? "/com/example/checkboxChecked.png" : "/com/example/checkboxUnchecked.png").toExternalForm()));
-            return icon;
+        ImageView icon = new ImageView();
+        icon.setFitWidth(20);
+        icon.setFitHeight(20);
+        icon.setImage(new Image(getClass().getResource(checked ? "/com/example/checkboxChecked.png" : "/com/example/checkboxUnchecked.png").toExternalForm()));
+        return icon;
         }
     }
