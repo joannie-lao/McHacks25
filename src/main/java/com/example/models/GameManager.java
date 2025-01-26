@@ -1,6 +1,7 @@
 package com.example.models;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import com.example.util.ContentLoader;
 
@@ -21,6 +22,7 @@ public class GameManager {
         // Load the game
         this.areas = ContentLoader.loadAreas();
         this.decorations = ContentLoader.loadDecorations();
+        this.user.addHabit(new Habit("test", 2, TimeUnit.DAYS, 0));
 
     }
     public User getUser(){
@@ -32,7 +34,7 @@ public class GameManager {
         }
         return instance;
     }
-    
+
     
     
 }

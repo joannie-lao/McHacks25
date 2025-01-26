@@ -11,6 +11,7 @@ public class Habit {
     private TimeUnit unit;
     private int streak;
     private LocalDate lastCompleted;
+    private boolean isCompleted;
     private Integer difficulty;
     private int dayFreq;
     private int timesCompleted;
@@ -42,8 +43,26 @@ public class Habit {
         this.timesCompleted = 0;
         this.total = new SizeLimitedQueue<LocalDate>(frequency);
     }
+    public String getName(){
+        return name;
+    }
+    public int getFrequency(){
+        return frequency;
+    }
+    public TimeUnit getUnit(){
+        return unit;
+    }
+    public int getTimesCompleted(){
+        return timesCompleted;
+    }
+    public LocalDate getLastCompleted(){
+        return lastCompleted;
+    }
+    public boolean getCompleted(){
+        return isCompleted;
+    }
 
-    public void habitCompleted(){
+    public void isCompleted(){
         LocalDate today = LocalDate.now();
         LocalDate toCheck = LocalDate.now();
         for (int i = 0; i < dayFreq; i++){
@@ -60,8 +79,12 @@ public class Habit {
             streak = 1;
         }
         lastCompleted = today;
+        isCompleted = true;
         total.add(today);
         timesCompleted++;
+    }
+    public void incomplete(){
+        isCompleted = false;
     }
     public void resetStreak(){
         streak = 0;

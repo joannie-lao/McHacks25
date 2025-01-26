@@ -1,5 +1,6 @@
 package com.example.models;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
@@ -25,6 +26,7 @@ public class User {
         difficultyMap.put(7, new Triple<Integer,Integer,Integer>(7,8,9));
         difficultyMap.put(8, new Triple<Integer,Integer,Integer>(8,9,10));
         habitsAllowed = 5;
+        this.habits = new ArrayList<Habit>();
     }
     public int getHabitsRemaining(){
         return habitsAllowed - habits.size();
@@ -40,7 +42,7 @@ public class User {
         habits.remove(habit);
     }
     public void completeHabit(Habit habit){
-        habit.habitCompleted();
+        habit.isCompleted();
         Integer habitDifficulty = habit.getDifficulty();
         if(difficulty.equals("easy")){
             coins += habit.calculateCoins(difficultyMap.get(habitDifficulty).getFirst());
@@ -66,6 +68,9 @@ public class User {
         if(streak > maxStreak){
             maxStreak = streak;
         }
+    }
+    public List<Habit> getHabits(){
+        return habits;
     }
        
 
