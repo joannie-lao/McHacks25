@@ -3,7 +3,7 @@ package com.example.models;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Area {
+public abstract class Area {
     private String name;
     private List<Decoration> decorations;
     private Store store;

@@ -1,7 +1,7 @@
 package com.example.util;
 import com.example.models.Area;
 import com.example.models.Decoration;
-import com.example.models.User;
+//import com.example.models.User;
 import com.google.gson.Gson;
 //import com.google.gson.reflect.TypeToken;
 import java.io.InputStreamReader;

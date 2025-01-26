@@ -2,20 +2,23 @@ package com.example.models;
 
 import java.util.List;
 
-public class Decoration {
+public abstract class Decoration {
     private String name;
     private int cost;
     private int tier;
     private Area area;
-    //private List<png> growthStages; make subclass of decorations that grow/evolve
+    private GrowableBehavior growableBehavior;
 
-    public Decoration(String name, int cost, int tier, Area area) {
+    public Decoration(String name, int cost, int tier, Area area,boolean growable,List<String> stages) {
         this.name = name;
         this.cost = cost;
         this.tier = tier;
         this.area = area;
         area.getStore().getTieredDecorations().get(tier).add(this);
         area.addDecoration(this);
+        if(growable){
+            this.growableBehavior = new GrowableBehavior(stages);
+        }
     }
 
     public String getName() {
