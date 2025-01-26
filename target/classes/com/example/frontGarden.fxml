@@ -25,13 +25,13 @@ stylesheets ="@styles.css" alignment="center" hgap="10" vgap="10">
     <Button fx:id="storeButton" onAction="#switchToStore" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
         <graphic>
             <ImageView fitWidth="50" fitHeight="50">
-                <image>
+                <image size="50">
                     <Image url="@cart.png" />
                 </image>
             </ImageView>
         </graphic>
     </Button>
     <VBox>
-    
+
     </VBox>
 </GridPane>

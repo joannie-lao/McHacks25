@@ -1,11 +1,21 @@
-.button{
-    
+.button {
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
     -fx-background-color: transparent;
 }
-.button:hover{
+.button:hover {
     -fx-background-color: transparent;
     -fx-border-color: transparent;
     -fx-cursor: hand;
+}
+.check-box {
+    -fx-background-color: -fx-background;
+    -fx-label-padding: 0;
+}
+.check-box > .box, .check-box > .box > .mark {
+    -fx-padding: 0;
+    -fx-check-box-size: 30;
+}
+.check-box:selected {
+    -fx-background: -fx-background; /* Change this line */
 }

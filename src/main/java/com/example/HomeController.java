@@ -56,9 +56,10 @@ public class HomeController {
         }
         private ImageView createHabitIcon(boolean checked){
         ImageView icon = new ImageView();
-        icon.setFitWidth(20);
-        icon.setFitHeight(20);
+        icon.setFitWidth(45);
+        icon.setFitHeight(45);
         icon.setImage(new Image(getClass().getResource(checked ? "/com/example/checkboxChecked.png" : "/com/example/checkboxUnchecked.png").toExternalForm()));
         return icon;
         }
+        
     }
