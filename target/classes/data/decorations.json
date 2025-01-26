@@ -42,6 +42,26 @@
         "type": "Static",
         "cost": 10,
         "image": ""
+    },
+    {
+        "name":"Pig",
+        "type":"Alive",
+        "cost": 100,
+        "frames":[
+            {
+                "stage": 1,
+                "image": ""
+            },
+            {
+                "stage": 2,
+                "image": ""
+            },
+            {
+                "stage": 3,
+                "image": ""
+            }
+        ]   
+        
     }
     
 ]
