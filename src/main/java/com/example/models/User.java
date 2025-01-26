@@ -12,6 +12,7 @@ public class User {
     private String difficulty;
     private HashMap<Integer,Triple<Integer,Integer,Integer>> difficultyMap = new HashMap<Integer,Triple<Integer,Integer,Integer>>();
     private int habitsAllowed;
+    private int maxStreak;
 
     public User() {
         this.coins = 0;
@@ -58,5 +59,11 @@ public class User {
     public void spendCoins(int cost){
         coins -= cost;
     }
+    public int getMaxStreak(){
+        return maxStreak;
+    }
+    public void setMaxStreak(int streak){
+        maxStreak = streak;
+    }   
 
 }

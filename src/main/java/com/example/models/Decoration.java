@@ -1,10 +1,13 @@
 package com.example.models;
 
+import java.util.List;
+
 public class Decoration {
     private String name;
     private int cost;
     private int tier;
     private Area area;
+    //private List<png> growthStages; make subclass of decorations that grow/evolve
 
     public Decoration(String name, int cost, int tier, Area area) {
         this.name = name;

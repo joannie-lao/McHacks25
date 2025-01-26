@@ -34,6 +34,7 @@ public class Habit {
             streak = 1;
         }
         lastCompleted = today;
+        
         }
         public void resetStreak(){
             streak = 0;
