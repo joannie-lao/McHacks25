@@ -17,4 +17,22 @@ public class Inventory {
     public void getDecorationCount(Decoration decoration){
         decorationInventory.get(decoration);
     }
+    public void removeDecoration(Decoration decoration){
+        if(decorationInventory.containsKey(decoration)){
+            if(decorationInventory.get(decoration) > 1){
+                decorationInventory.put(decoration,decorationInventory.get(decoration)-1);
+            }else{
+                decorationInventory.remove(decoration);
+            }
+        }
+    }
+    public HashMap<Decoration,Integer> getDecorationInventory(){
+        return decorationInventory;
+    }
+    public void placeDecoration(Decoration decoration, Area area){
+        if(decorationInventory.containsKey(decoration)){
+            area.addDecoration(decoration);
+            removeDecoration(decoration);
+        }
+    }
 }

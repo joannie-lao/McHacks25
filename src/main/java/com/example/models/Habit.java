@@ -3,7 +3,6 @@ package com.example.models;
 import java.time.LocalDate;
 import java.util.concurrent.TimeUnit;
 import java.util.LinkedList; 
-import java.util.Queue; 
 
 public class Habit {
     private String name;

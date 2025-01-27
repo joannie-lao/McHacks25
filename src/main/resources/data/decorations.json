@@ -1,52 +1,67 @@
 [
     {
         "name": "Tulip",
-        "type": "Growable",
         "cost": 5,
-        "growthStages": [
+        "tier":1,
+        "area": "Front Garden",
+        "growable": "true",
+        "stages": [
             {
                 "stage": 1,
-                "image": ""
+                "image": "com.example.tulip1.png"
             },
             {
                 "stage": 2,
-                "image": ""
+                "image": "com.example.tulip2.png"
             },
             {
                 "stage": 3,
-                "image": ""
+                "image": "com.example.tulip3.png"
+            }
+        ],
+        "animated": "false",
+        "frames":"null"
+    },
+    {
+        "name": "Fountain",
+        "cost": "50",
+        "tier":1,
+        "area":"Front Garden",
+        "growable":"false",
+        "stages":"null",
+        "animated":"true",
+        "frames":[
+            {
+                "frame": 1,
+                "image": "com.example.fountain1.png"
+            },
+            {
+                "frame": 2,
+                "image": "com.example.fountain2.png"
+            },
+            {
+                "frame": 3,
+                "image": "com.example.fountain3.png"
             }
         ]
     },
     {
-        "name": "Fountain",
-        "type": "Animated",
-        "cost": "50",
-        "frames":[
-            {
-                "stage": 1,
-                "image": ""
-            },
-            {
-                "stage": 2,
-                "image": ""
-            },
-            {
-                "stage": 3,
-                "image": ""
-            }
-        ] 
-    },
-    {
         "name": "Bench",
-        "type": "Static",
         "cost": 10,
-        "image": ""
+        "tier":1,
+        "area":"Front Garden",
+        "growable": false,
+        "stages": null,
+        "animated":"false"
     },
     {
         "name":"Pig",
-        "type":"Alive",
         "cost": 100,
+        "tier":1,
+        "area":"Front Garden",
+        "growable": true,
+        "stages":[],
+        "animated":true,
         "frames":[
             {
                 "stage": 1,

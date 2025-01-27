@@ -1,11 +1,11 @@
 [
     {
         "name":"Front Garden",
-        "unlockRequirements":"",
-        "locked":false,
+        "decorations":["Fountain,Bench,Tulip"],
         "store":"GardenStore",
-        "decorations":[ "Tulip", "Fountain", "Bench" ],
-        "scene":"image"
+        "isUnlocked":"true",
+        "unlockRequirements":"",
+        "decorations":[ "Tulip", "Fountain", "Bench" ]
     },
     {
         "name": "Farmyard",

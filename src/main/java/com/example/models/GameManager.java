@@ -20,10 +20,15 @@ public class GameManager {
     }
     public void loadGame() {
         // Load the game
-        this.areas = ContentLoader.loadAreas();
-        this.decorations = ContentLoader.loadDecorations();
+        this.areas = ContentLoader.loadAreas("src/main/resources/data/areas.json");
+        this.decorations = ContentLoader.loadDecorations("src/main/resources/data/decorations.json");
+        if (this.decorations == null || this.decorations.isEmpty()) {
+            System.err.println("Failed to load decorations.");
+        } else {
+            System.out.println("Loaded " + this.decorations.size() + " decorations.");
+        }
         this.user.addHabit(new Habit("test", 2, TimeUnit.DAYS, 0));
-
+        this.user.addHabit(new Habit("test2", 3, TimeUnit.DAYS, 0));
     }
     public User getUser(){
         return user;

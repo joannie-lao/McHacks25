@@ -3,11 +3,14 @@ package com.example.models;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Area {
+import javafx.scene.Scene;
+
+public class Area {
     private String name;
     private List<Decoration> decorations;
     private Store store;
     private boolean isUnlocked;
+    private String unlockRequirements;
 
     public Area(String name) {
         this.name = name;
